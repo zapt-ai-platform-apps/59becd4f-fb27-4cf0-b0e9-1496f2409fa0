@@ -1,0 +1,25 @@
+{
+  "name": "solidjs-vite-tailwind-vercel",
+  "version": "1.0.0",
+  "description": "SolidJS IPTV app with Vite, Tailwind, and Supabase authentication",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "solid-js": "^1.8.22",
+    "@supabase/auth-ui-shared": "^0.1.8",
+    "@supabase/auth-ui-solid": "^0.3.8",
+    "@zapt/zapt-js": "^1.0.5",
+    "hls.js": "^1.1.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.7",
+    "vite-plugin-solid": "^2.10.2"
+  }
+}
