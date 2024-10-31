@@ -1,18 +1,25 @@
-import { onMount } from 'solid-js';
+import { onMount, onCleanup } from 'solid-js';
 import Hls from 'hls.js';
 
 function VideoPlayer(props) {
   let videoRef;
+  let hls;
 
   onMount(() => {
     if (Hls.isSupported()) {
-      const hls = new Hls();
+      hls = new Hls();
       hls.loadSource(props.channel.url);
       hls.attachMedia(videoRef);
     } else if (videoRef.canPlayType('application/vnd.apple.mpegurl')) {
       videoRef.src = props.channel.url;
     } else {
       console.error('This browser does not support HLS');
+    }
+  });
+
+  onCleanup(() => {
+    if (hls) {
+      hls.destroy();
     }
   });
 

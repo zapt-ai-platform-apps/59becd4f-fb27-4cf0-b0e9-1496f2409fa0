@@ -2,20 +2,15 @@
 
 ## Overview
 
-New App is an IPTV streaming application that allows users to upload or input their own IPTV playlists (M3U files or URLs) to access and watch IPTV channels. Users can upload their playlists, browse available channels, and watch live TV streams directly from the app without the need to sign in.
+New App is an IPTV streaming application that allows users to access IPTV channels by entering their username and password credentials. The app constructs the playlist URL based on the provided credentials, loads the IPTV channels, and allows users to browse and watch live TV streams directly from the app without the need to sign in.
 
 ## User Guide
 
-### 1. Upload Playlist
+### 1. Enter Credentials
 
-1. Upon opening the app, you will be presented with options to upload your IPTV playlist.
-2. You have two options to upload your IPTV playlist:
-   - **Enter Playlist URL**:
-     - Input the URL of your M3U playlist in the provided text field.
-     - Click the **"Load Playlist"** button.
-   - **Upload Playlist File**:
-     - Click on the file input to select an M3U or TXT file from your device.
-     - Click the **"Upload Playlist"** button.
+1. Upon opening the app, you will be prompted to enter your IPTV service **Username** and **Password**.
+2. Input your **Username** and **Password** in the provided text fields.
+3. Click the **"Load Playlist"** button.
 
 ### 2. Browse Channels
 
