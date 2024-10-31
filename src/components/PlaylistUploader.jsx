@@ -35,7 +35,9 @@ function PlaylistUploader(props) {
         />
         <button
           type="submit"
-          class={`mt-2 w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer ${props.loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+          class={`mt-2 w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer ${
+            props.loading ? 'opacity-50 cursor-not-allowed' : ''
+          }`}
           disabled={props.loading}
         >
           {props.loading ? 'Loading...' : 'Load Playlist'}

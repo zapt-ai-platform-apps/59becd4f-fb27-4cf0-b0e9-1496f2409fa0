@@ -9,11 +9,14 @@ function App() {
   const [loading, setLoading] = createSignal(false);
 
   // Handlers for playlist
-
   const handlePlaylistFetch = async (username, password) => {
     setLoading(true);
     try {
-      const playlistURL = `https://apsmart.in:80/get.php?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}&type=m3u_plus&output=ts`;
+      const playlistURL = `https://apsmart.in:80/get.php?username=${encodeURIComponent(
+        username
+      )}&password=${encodeURIComponent(
+        password
+      )}&type=m3u_plus&output=ts`;
       const response = await fetch(playlistURL);
       if (!response.ok) {
         throw new Error('Failed to fetch playlist');

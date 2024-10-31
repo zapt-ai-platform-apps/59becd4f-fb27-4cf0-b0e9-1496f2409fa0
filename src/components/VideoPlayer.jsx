@@ -1,11 +1,15 @@
-import { onMount, onCleanup } from 'solid-js';
+import { createEffect, onCleanup } from 'solid-js';
 import Hls from 'hls.js';
 
 function VideoPlayer(props) {
   let videoRef;
   let hls;
 
-  onMount(() => {
+  createEffect(() => {
+    if (hls) {
+      hls.destroy();
+    }
+
     if (Hls.isSupported()) {
       hls = new Hls();
       hls.loadSource(props.channel.url);
@@ -15,6 +19,12 @@ function VideoPlayer(props) {
     } else {
       console.error('This browser does not support HLS');
     }
+
+    return () => {
+      if (hls) {
+        hls.destroy();
+      }
+    };
   });
 
   onCleanup(() => {
@@ -25,7 +35,9 @@ function VideoPlayer(props) {
 
   return (
     <div>
-      <h3 class="text-xl font-bold mb-2 text-purple-600">Now Playing: {props.channel.name}</h3>
+      <h3 class="text-xl font-bold mb-2 text-purple-600">
+        Now Playing: {props.channel.name}
+      </h3>
       <video
         ref={videoRef}
         controls
