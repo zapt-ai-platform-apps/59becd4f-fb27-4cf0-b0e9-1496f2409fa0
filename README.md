@@ -11,6 +11,7 @@ New App is an IPTV streaming application that allows users to access IPTV channe
 1. Upon opening the app, you will be prompted to enter your IPTV service **Username** and **Password**.
 2. Input your **Username** and **Password** in the provided text fields.
 3. Click the **"Load Playlist"** button.
+4. If the credentials are correct, the playlist will load. If not, an error message will be displayed.
 
 ### 2. Browse Channels
 
@@ -25,6 +26,7 @@ New App is an IPTV streaming application that allows users to access IPTV channe
 
 ## External APIs and Services
 
+- **IPTV Provider API**: Used to fetch the M3U playlist based on user credentials.
 - **Hls.js**: Integrated for streaming HLS (HTTP Live Streaming) video content.
 - **Sentry**: Integrated for error logging and monitoring.
 

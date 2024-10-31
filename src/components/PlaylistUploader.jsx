@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { createSignal, Show } from 'solid-js';
 
 function PlaylistUploader(props) {
   const [username, setUsername] = createSignal('');
@@ -43,6 +43,9 @@ function PlaylistUploader(props) {
           {props.loading ? 'Loading...' : 'Load Playlist'}
         </button>
       </form>
+      <Show when={props.errorMessage}>
+        <div class="mt-4 text-red-500">{props.errorMessage}</div>
+      </Show>
     </div>
   );
 }
